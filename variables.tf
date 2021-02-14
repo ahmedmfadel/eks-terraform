@@ -1,6 +1,11 @@
 variable "vpc_id" {
-    default = "vpc-0ec7e76de93cca7fc"
+    default = "vpc-02f30b09cce2f45cf"
 }
+
+data "aws_subnet_ids" "test" {
+  vpc_id = var.vpc_id
+}
+
 variable "region" {
     default = "us-east-1"
 }
